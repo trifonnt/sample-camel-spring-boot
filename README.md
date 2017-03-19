@@ -15,11 +15,11 @@ mvn compile
 docker run -d --name consul -p 8500:8500 -p 8600:8600 consul:0.7.5
 ```
 
-### Check if Consul is running. Open URL
-[All services registered in Consul](http://localhost:8500/v1/agent/services)
+### Check if Consul is running. List all services registered in Consul
+[http://localhost:8500/v1/agent/services](http://localhost:8500/v1/agent/services)
 
 ### Consul WEB UI
-[Consul WEB UI](http://localhost:8500/ui)
+[http://localhost:8500/ui](http://localhost:8500/ui)
 
 
 ### Start Account Microservice Service
@@ -36,5 +36,5 @@ mvn spring-boot:run -Dconsul-url=http://localhost:8500 -Dport=8080
 cd sample-camel-spring-boot/gateway
 mvn spring-boot:run -Dconsul-url=http://localhost:8500 -Dport=8000
 ```
-### Check if Account Microservice is running
+### Use account service through gateway
 [http://localhost:8000/account/](http://localhost:8000/account/)
