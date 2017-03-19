@@ -1,5 +1,6 @@
 package pl.piomin.services.camel.account;
 
+import java.util.Arrays;
 import java.util.EventObject;
 
 import org.apache.camel.CamelContext;
@@ -24,7 +25,7 @@ public class EventNotifier extends EventNotifierSupport {
 		if (event instanceof CamelContextStartedEvent) {
 			CamelContext context = ((CamelContextStartedEvent) event).getContext();
 			ProducerTemplate t = context.createProducerTemplate();
-			t.sendBody("direct:start", new Register(serviceId, "account-service", "127.0.0.1", port));
+			t.sendBody("direct:start", new Register(serviceId, "account-service", "127.0.0.1", port, Arrays.asList("default")));
 		}
 		if (event instanceof CamelContextStoppingEvent) {
 			CamelContext context = ((CamelContextStoppingEvent) event).getContext();
