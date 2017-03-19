@@ -37,4 +37,4 @@ cd sample-camel-spring-boot/gateway
 mvn spring-boot:run -Dconsul-url=http://localhost:8500 -Dport=8000
 ```
 ### Use account service through gateway
-[http://localhost:8000/account/](http://localhost:8000/account/)
+[http://localhost:8000/account-new/](http://localhost:8000/account-new/)
