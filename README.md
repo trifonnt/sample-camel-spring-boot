@@ -21,6 +21,10 @@ docker run -d --name consul -p 8500:8500 -p 8600:8600 consul:0.7.5
 ### Consul WEB UI
 [http://localhost:8500/ui](http://localhost:8500/ui)
 
+### Consul CURL command to get service filtered by Tag
+```shell
+curl 'http://localhost:8500/v1/catalog/service/account-service?tag=default'
+```
 
 ### Start Account Microservice Service
 ```shell
