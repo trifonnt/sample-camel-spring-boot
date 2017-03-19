@@ -25,6 +25,7 @@ public class AccountRoute extends RouteBuilder {
 		restConfiguration()
 			.component("netty-http")
 			.bindingMode(RestBindingMode.json)
+			.dataFormatProperty("prettyPrint", "true")
 			.port( port );
 
 		// This route is invoked by EventNotifier class!
