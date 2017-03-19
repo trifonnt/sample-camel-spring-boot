@@ -24,3 +24,14 @@ docker run -d --name consul -p 8500:8500 -p 8600:8600 consul:0.7.5
 cd sample-camel-spring-boot/account
 mvn spring-boot:run -Dconsul-url=http://localhost:8500 -Dport=8080
 ```
+### Check if Account Microservice is running
+[http://localhost:8080/account/](http://localhost:8080/account/)
+
+
+### Start Gateway Service
+```shell
+cd sample-camel-spring-boot/gateway
+mvn spring-boot:run -Dconsul-url=http://localhost:8500 -Dport=8000
+```
+### Check if Account Microservice is running
+[http://localhost:8000/account/](http://localhost:8000/account/)
