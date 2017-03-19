@@ -5,4 +5,5 @@ Microservices with Apache Camel
 ```shell
 git clone https://github.com/trifonnt/sample-camel-spring-boot.git
 cd sample-camel-spring-boot
+mvn compile
 ```
