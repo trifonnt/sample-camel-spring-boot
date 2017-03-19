@@ -30,7 +30,7 @@
 	<modules>
 		<module>gateway</module>
 		<module>account</module>
-		<module>discovery</module>
+		<!--module>discovery</module-->
 		<module>customer</module>
 		<module>camel-common</module>
 	</modules>
