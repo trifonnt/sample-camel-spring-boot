@@ -23,10 +23,10 @@ public class RouteGateway extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		ConsulConfigurationDefinition config = new ConsulConfigurationDefinition();
-		config.setComponent("netty4-http");
-		config.setUrl( consulUrl );
-		context.setServiceCallConfiguration(config);
+		ConsulConfigurationDefinition consulConfig = new ConsulConfigurationDefinition();
+		consulConfig.setComponent("netty4-http");
+		consulConfig.setUrl( consulUrl );
+		context.setServiceCallConfiguration( consulConfig );
 
 		restConfiguration()
 			.component("netty4-http")
