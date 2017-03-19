@@ -17,18 +17,19 @@ public class EventNotifier extends EventNotifierSupport {
 
 	@Value("${port}")
 	private int port;
-	
+
 	@Override
 	public void notify(EventObject event) throws Exception {
+		String serviceId = "account" + port;
 		if (event instanceof CamelContextStartedEvent) {
 			CamelContext context = ((CamelContextStartedEvent) event).getContext();
 			ProducerTemplate t = context.createProducerTemplate();
-			t.sendBody("direct:start", new Register("account" + port, "account", "127.0.0.1", port));
+			t.sendBody("direct:start", new Register(serviceId, "account-service", "127.0.0.1", port));
 		}
 		if (event instanceof CamelContextStoppingEvent) {
 			CamelContext context = ((CamelContextStoppingEvent) event).getContext();
 			ProducerTemplate t = context.createProducerTemplate();
-			t.sendBodyAndHeader("direct:stop", null, "id", "account" + port);
+			t.sendBodyAndHeader("direct:stop", null, "id", serviceId);
 		}
 	}
 
@@ -36,5 +37,4 @@ public class EventNotifier extends EventNotifierSupport {
 	public boolean isEnabled(EventObject event) {
 		return (event instanceof CamelContextStartedEvent || event instanceof CamelContextStoppingEvent);
 	}
-
 }

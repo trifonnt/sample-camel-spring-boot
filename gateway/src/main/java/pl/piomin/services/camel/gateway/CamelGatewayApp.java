@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CamelGateway {
+public class CamelGatewayApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CamelGateway.class, args);
+		SpringApplication.run(CamelGatewayApp.class, args);
 	}
-
 }

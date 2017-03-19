@@ -14,13 +14,12 @@ public class Unregistration {
 
 	@Value("${port}")
 	private int port;
-	
+
 	@Autowired
 	ProducerTemplate template;
 
 	@PreDestroy
 	public void hello() {
 		template.sendBodyAndHeader("direct:stop", null, "id", "account" + port);
-	}
-	
+	}	
 }

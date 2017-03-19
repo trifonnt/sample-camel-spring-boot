@@ -21,7 +21,6 @@ public class Register {
 	public String getID() {
 		return ID;
 	}
-
 	public void setID(String iD) {
 		ID = iD;
 	}
@@ -29,7 +28,6 @@ public class Register {
 	public String getName() {
 		return Name;
 	}
-
 	public void setName(String name) {
 		Name = name;
 	}
@@ -37,7 +35,6 @@ public class Register {
 	public String getAddress() {
 		return Address;
 	}
-
 	public void setAddress(String address) {
 		Address = address;
 	}
@@ -45,9 +42,7 @@ public class Register {
 	public int getPort() {
 		return Port;
 	}
-
 	public void setPort(int port) {
 		Port = port;
 	}
-
 }

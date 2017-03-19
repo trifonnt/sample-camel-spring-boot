@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CamelAccountService {
+public class CamelAccountApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CamelAccountService.class, args);
+		SpringApplication.run(CamelAccountApp.class, args);
 	}
-	
 }
